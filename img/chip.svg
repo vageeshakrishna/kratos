@@ -1,0 +1,18 @@
+<svg id="chip" xmlns="http://www.w3.org/2000/svg" width="134" height="93" viewBox="0 0 134 93">
+  <rect id="Rectangle_36" data-name="Rectangle 36" width="130" height="89" rx="26" transform="translate(2 2)" fill="#e9e24c" stroke="#000" stroke-width="4"/>
+  <path id="Path_6" data-name="Path 6" d="M52.058,53.735c3.383,2.985,6.625,10.747-1.494,17.912" fill="none" stroke="#000" stroke-width="4"/>
+  <line id="Line_17" data-name="Line 17" x2="36.609" transform="translate(3.494 24.867)" fill="none" stroke="#000" stroke-width="4"/>
+  <line id="Line_18" data-name="Line 18" x2="59.022" transform="translate(72.978 24.053)" fill="none" stroke="#000" stroke-width="4"/>
+  <line id="Line_19" data-name="Line 19" x2="32.126" transform="translate(2.747 39.522)" fill="none" stroke="#000" stroke-width="4"/>
+  <line id="Line_20" data-name="Line 20" x2="65.747" transform="translate(66.253 39.522)" fill="none" stroke="#000" stroke-width="4"/>
+  <line id="Line_21" data-name="Line 21" x2="50.805" transform="translate(2.747 54.177)" fill="none" stroke="#000" stroke-width="4"/>
+  <path id="Path_7" data-name="Path 7" d="M72.978,56.177H132" fill="none" stroke="#000" stroke-width="4"/>
+  <line id="Line_22" data-name="Line 22" x2="50.805" transform="translate(2 71.274)" fill="none" stroke="#000" stroke-width="4"/>
+  <line id="Line_23" data-name="Line 23" x2="56.034" transform="translate(74.471 71.274)" fill="none" stroke="#000" stroke-width="4"/>
+  <path id="Path_8" data-name="Path 8" d="M33.006,39.487c-.5,5.292,3.735,16.283,20.172,14.655" fill="none" stroke="#000" stroke-width="4"/>
+  <path id="Path_9" data-name="Path 9" d="M38.609,24.832c-2.988,2.035-5.977,7.735-5.6,14.248" fill="none" stroke="#000" stroke-width="4"/>
+  <path id="Path_10" data-name="Path 10" d="M38.236,0V26.867M74.1,0V26.053" fill="none" stroke="#000" stroke-width="4"/>
+  <path id="Path_11" data-name="Path 11" d="M51.31,71.646V92M76.339,71.239V91.593" fill="none" stroke="#000" stroke-width="4"/>
+  <path id="Path_12" data-name="Path 12" d="M74.47,55.363c-2.137,3.257-4.62,10.91,1.494,15.469" fill="none" stroke="#000" stroke-width="4"/>
+  <path id="Path_13" data-name="Path 13" d="M67.747,39.894c3.736,2.85,9.414,8.386,6.724,15.876" fill="none" stroke="#000" stroke-width="4"/>
+</svg>

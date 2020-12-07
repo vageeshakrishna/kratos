@@ -1,0 +1,13 @@
+header {
+  padding: 0 10vw;
+  height: 15vh;
+  @include flex;
+  img {
+    height: 10vh;
+  }
+  font-family: "Nothing You Could Do", cursive;
+  ul {
+    @include flex;
+    width: 30vw;
+  }
+}

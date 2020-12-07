@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920.061" height="650.472" >
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#db5431"/>
+      <stop offset="1" stop-color="#7b69e6"/>
+    </linearGradient>
+  </defs>
+  <path id="payment-background" d="M5968,727,7888.061,431.21v650.472H5968Z" transform="translate(-5968 -431.21)" fill="url(#linear-gradient)"/>
+</svg>
