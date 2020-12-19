@@ -20,16 +20,16 @@ header {
 
 main {
   h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     text-align: center;
     margin-top: 70vh;
     font-weight: 200;
   }
   h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     font-family: "montserrat", sans-serif;
-    margin-top: 10vh;
+    margin-top: 5vh;
     font-weight: 300;
   }
   .hero {
@@ -44,5 +44,41 @@ main {
     position: absolute;
     z-index: -1;
     top: 50vh;
+  }
+}
+.cta {
+  padding: 3vh 5vw;
+  margin: 5% 0 0 50%;
+  transform: translateX(-50%);
+  background-color: #db5431;
+  color: white;
+  border: #db5431;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.9s ease-in-out;
+  &:before {
+    content: "";
+    position: absolute;
+    display: inline;
+    height: 100%;
+    top: 0%;
+    width: 0%;
+    right: -15%;
+    transform: skew(45deg);
+    transition: all 0.8s ease;
+  }
+  &:hover:before {
+    z-index: -1;
+    background: white;
+    width: 150%;
+    height: 100%;
+  }
+  &:hover {
+    color: #db5431;
   }
 }
