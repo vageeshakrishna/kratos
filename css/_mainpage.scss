@@ -58,27 +58,25 @@ main {
   font-weight: bolder;
   position: relative;
   overflow: hidden;
-  z-index: 1;
   cursor: pointer;
-  transition: all 0.9s ease-in-out;
+  transition: all 0.4s ease-in-out;
   &:before {
     content: "";
     position: absolute;
-    display: inline;
     height: 100%;
-    top: 0%;
+    top: 0;
     width: 0%;
     right: -15%;
-    transform: skew(45deg);
-    transition: all 0.8s ease;
+    transform: skewX(45deg);
+    transition: all 0.4s ease;
   }
   &:hover:before {
     z-index: -1;
     background: white;
     width: 150%;
-    height: 100%;
   }
   &:hover {
+    box-shadow: 10px 10px 10px rgba($color: #2e0a01, $alpha: 1);
     color: #db5431;
   }
 }

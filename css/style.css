@@ -104,34 +104,33 @@ main .bg {
   font-weight: bolder;
   position: relative;
   overflow: hidden;
-  z-index: 1;
   cursor: pointer;
-  -webkit-transition: all 0.9s ease-in-out;
-  transition: all 0.9s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .cta:before {
   content: "";
   position: absolute;
-  display: inline;
   height: 100%;
-  top: 0%;
+  top: 0;
   width: 0%;
   right: -15%;
-  -webkit-transform: skew(45deg);
-          transform: skew(45deg);
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transform: skewX(45deg);
+          transform: skewX(45deg);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .cta:hover:before {
   z-index: -1;
   background: white;
   width: 150%;
-  height: 100%;
 }
 
 .cta:hover {
+  -webkit-box-shadow: 10px 10px 10px #2e0a01;
+          box-shadow: 10px 10px 10px #2e0a01;
   color: #db5431;
 }
 /*# sourceMappingURL=style.css.map */
