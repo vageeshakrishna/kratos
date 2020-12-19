@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nothing+You+Could+Do&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #222;
+  color: white;
+  position: relative;
+  font-family: "nothing you could do", cursive;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+}
+
+header nav {
+  height: 10vh;
+  padding: 0 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header nav .logo {
+  height: 6vh;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40vh;
+  font-family: "montserrat", sans-serif;
+}
+
+main h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 70vh;
+  font-weight: 200;
+}
+
+main h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "montserrat", sans-serif;
+  margin-top: 10vh;
+  font-weight: 300;
+}
+
+main .hero {
+  position: absolute;
+  height: 60vh;
+  top: 10vh;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+main .bg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 50vh;
+}
+/*# sourceMappingURL=style.css.map */
