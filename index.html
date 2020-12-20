@@ -16,14 +16,31 @@
           <li>Log In</li>
         </ul>
       </nav>
-      <main>
-        <img src="./assets/Hero.svg" alt="Hero" class="hero" />
-        <h1>Fight for Fitness</h1>
-        <h3>No More Excuses to compromise Fitness</h3>
-        <img src="./assets/BG.svg" alt="" class="bg" />
-        <button class="cta">Sign Up</button>
-      </main>
     </header>
+    <main>
+      <img src="./assets/Hero.svg" alt="Hero" class="hero" />
+      <div class="hero-slogan">
+        <h1 class="slogan">Fight for Fitness</h1>
+        <h3 class="slogan">No More Excuses to compromise Fitness</h3>
+        <button class="cta slogan">Sign Up</button>
+      </div>
+      <img src="./assets/BG.svg" alt="" class="bg" />
+    </main>
+
+    <section class="prod-quote">
+      <h1>Best-Sellers</h1>
+      <img src="./assets/purp-main-back.svg" alt="" class="main-purp-bg" />
+      <div class="container card-container">
+        <div class="card"><img src="./assets/barbell 1.svg" alt="" /></div>
+        <div class="card"><img src="./assets/Dumbbell.svg" alt="" /></div>
+        <div class="card"><img src="./assets/Jersy 1.svg" alt="" /></div>
+        <div class="card"><img src="./assets/Tredmill.svg" alt="" /></div>
+      </div>
+      <a href="#">Visit Shop <img src="./assets/Arrow 1.svg" alt="" /></a>
+    </section>
+
+    <section class="about-us"></section>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
       integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
@@ -33,7 +50,7 @@
       var tl = new gsap.timeline({});
       var tl2 = new gsap.timeline({});
       tl.from(".bg", {
-        scaleY: 0,
+        scale: 0,
         duration: 2,
         ease: Power1.easeInOut,
         transformOrigin: "center",
@@ -41,7 +58,7 @@
         .from(
           ".hero",
           {
-            y: -1000,
+            scale: 0,
             opacity: 0,
             duration: 2,
             ease: Back.easeOut.config(1.7),
@@ -49,12 +66,21 @@
           },
           "=-1.4"
         )
+        .from(
+          ".slogan",
+          {
+            opacity: 0,
+            y: 40,
+            stagger: 0.3,
+          },
+          "=-.4"
+        )
         .to(".hero", {
           y: 10,
           yoyo: true,
           repeat: -1,
           ease: Power1.easeInOut,
-          duration: 1,
+          duration: 1.5,
         });
     </script>
   </body>

@@ -105,6 +105,10 @@ main .bg {
   top: 50vh;
 }
 
+.container {
+  padding: 0 10vw;
+}
+
 .cta {
   padding: 3vh 5vw;
   margin: 5% 0 0 50%;
@@ -119,8 +123,8 @@ main .bg {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .cta:before {
@@ -132,8 +136,8 @@ main .bg {
   right: -15%;
   -webkit-transform: skewX(45deg);
           transform: skewX(45deg);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .cta:hover:before {
@@ -145,5 +149,88 @@ main .bg {
 .cta:hover {
   -webkit-box-shadow: -10px 10px 10px #2e0a01;
           box-shadow: -10px 10px 10px #2e0a01;
+}
+
+.prod-quote {
+  min-height: 100vh;
+  position: relative;
+}
+
+.prod-quote .main-purp-bg {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  height: 70vh;
+  z-index: -1;
+}
+
+.prod-quote h1 {
+  font-size: 3rem;
+  margin: 10% 0 0 10%;
+}
+
+.prod-quote .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: space-between;
+}
+
+.prod-quote .card {
+  margin-top: 10%;
+  height: 60vh;
+  width: 17vw;
+  background-color: #c4c4c4;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.prod-quote .card:hover {
+  -webkit-transform: translateY(-1.5vh);
+          transform: translateY(-1.5vh);
+  -webkit-box-shadow: -10px 10px 20px rgba(44, 15, 44, 0.8);
+          box-shadow: -10px 10px 20px rgba(44, 15, 44, 0.8);
+}
+
+.prod-quote .card img {
+  position: absolute;
+  height: 20vh;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.prod-quote a {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  font-size: 2.5rem;
+}
+
+.prod-quote a:hover img {
+  -webkit-transform: translateX(2vw);
+          transform: translateX(2vw);
+}
+
+.prod-quote a img {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  height: 5vh;
+  right: -40%;
+  top: 5%;
+}
+
+.about-us {
+  height: 110vh;
 }
 /*# sourceMappingURL=style.css.map */
