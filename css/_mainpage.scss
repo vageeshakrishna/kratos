@@ -24,6 +24,17 @@ main {
     text-align: center;
     margin-top: 70vh;
     font-weight: 200;
+    position: relative;
+    &:after {
+      content: "";
+      height: 1vh;
+      width: 15vw;
+      background-color: #db5431;
+      position: absolute;
+      bottom: -10%;
+      right: 32%;
+      transform: skewY(-3deg);
+    }
   }
   h3 {
     font-size: 2rem;
@@ -38,6 +49,7 @@ main {
     top: 10vh;
     right: 50%;
     transform: translateX(50%);
+    opacity: 1;
   }
   .bg {
     width: 100%;
@@ -52,7 +64,7 @@ main {
   transform: translateX(-50%);
   background-color: #db5431;
   color: white;
-  border: #db5431;
+  border: 0.5vh solid #db5431;
   font-family: "montserrat", sans-serif;
   font-size: 1.3rem;
   font-weight: bolder;
@@ -72,11 +84,10 @@ main {
   }
   &:hover:before {
     z-index: -1;
-    background: white;
+    background: #6c63ff;
     width: 150%;
   }
   &:hover {
-    box-shadow: 10px 10px 10px rgba($color: #2e0a01, $alpha: 1);
-    color: #db5431;
+    box-shadow: -10px 10px 10px rgba($color: #2e0a01, $alpha: 1);
   }
 }

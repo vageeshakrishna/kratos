@@ -24,5 +24,38 @@
         <button class="cta">Sign Up</button>
       </main>
     </header>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var tl = new gsap.timeline({});
+      var tl2 = new gsap.timeline({});
+      tl.from(".bg", {
+        scaleY: 0,
+        duration: 2,
+        ease: Power1.easeInOut,
+        transformOrigin: "center",
+      })
+        .from(
+          ".hero",
+          {
+            y: -1000,
+            opacity: 0,
+            duration: 2,
+            ease: Back.easeOut.config(1.7),
+            yoyo: true,
+          },
+          "=-1.4"
+        )
+        .to(".hero", {
+          y: 10,
+          yoyo: true,
+          repeat: -1,
+          ease: Power1.easeInOut,
+          duration: 1,
+        });
+    </script>
   </body>
 </html>

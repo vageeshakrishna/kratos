@@ -65,6 +65,19 @@ main h1 {
   text-align: center;
   margin-top: 70vh;
   font-weight: 200;
+  position: relative;
+}
+
+main h1:after {
+  content: "";
+  height: 1vh;
+  width: 15vw;
+  background-color: #db5431;
+  position: absolute;
+  bottom: -10%;
+  right: 32%;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
 }
 
 main h3 {
@@ -82,6 +95,7 @@ main .hero {
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+  opacity: 1;
 }
 
 main .bg {
@@ -98,7 +112,7 @@ main .bg {
           transform: translateX(-50%);
   background-color: #db5431;
   color: white;
-  border: #db5431;
+  border: 0.5vh solid #db5431;
   font-family: "montserrat", sans-serif;
   font-size: 1.3rem;
   font-weight: bolder;
@@ -124,13 +138,12 @@ main .bg {
 
 .cta:hover:before {
   z-index: -1;
-  background: white;
+  background: #6c63ff;
   width: 150%;
 }
 
 .cta:hover {
-  -webkit-box-shadow: 10px 10px 10px #2e0a01;
-          box-shadow: 10px 10px 10px #2e0a01;
-  color: #db5431;
+  -webkit-box-shadow: -10px 10px 10px #2e0a01;
+          box-shadow: -10px 10px 10px #2e0a01;
 }
 /*# sourceMappingURL=style.css.map */
