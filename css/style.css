@@ -164,7 +164,7 @@ main .bg {
   z-index: -1;
 }
 
-.prod-quote h1 {
+.prod-quote .heading {
   font-size: 3rem;
   margin: 10% 0 0 10%;
 }
@@ -200,6 +200,14 @@ main .bg {
           box-shadow: -10px 10px 20px rgba(44, 15, 44, 0.8);
 }
 
+.prod-quote .card:hover img {
+  scale: 1.2;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
+          filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
+}
+
 .prod-quote .card img {
   position: absolute;
   height: 20vh;
@@ -207,6 +215,8 @@ main .bg {
   right: 50%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .prod-quote a {
@@ -232,5 +242,29 @@ main .bg {
 
 .about-us {
   height: 110vh;
+  margin-top: 10%;
+}
+
+.about-us .heading {
+  font-size: 3rem;
+  margin: 10% 0 0 10%;
+}
+
+.about-us .kratos-face {
+  padding: 5vw 10vw;
+  float: left;
+}
+
+.about-us p {
+  font-size: 2.5rem;
+  margin-top: 20vh;
+  padding-right: 10vw;
+  font-family: "montserrat", sans-serif;
+}
+
+.about-us p span {
+  font-family: "nothing you could do", cursive;
+  color: #db5431;
+  font-size: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

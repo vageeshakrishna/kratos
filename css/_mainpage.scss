@@ -104,7 +104,7 @@ main {
     height: 70vh;
     z-index: -1;
   }
-  h1 {
+  .heading {
     font-size: 3rem;
     margin: 10% 0 0 10%;
   }
@@ -124,12 +124,18 @@ main {
       transform: translateY(-1.5vh);
       box-shadow: -10px 10px 20px rgba($color: rgb(44, 15, 44), $alpha: 0.8);
     }
+    &:hover img {
+      scale: 1.2;
+      transform-origin: center;
+      filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
+    }
     img {
       position: absolute;
       height: 20vh;
       top: 50%;
       right: 50%;
       transform: translate(50%, -50%);
+      transition: all 0.8s ease;
     }
   }
   a {
@@ -151,4 +157,24 @@ main {
 }
 .about-us {
   height: 110vh;
+  margin-top: 10%;
+  .heading {
+    font-size: 3rem;
+    margin: 10% 0 0 10%;
+  }
+  .kratos-face {
+    padding: 5vw 10vw;
+    float: left;
+  }
+  p {
+    font-size: 2.5rem;
+    margin-top: 20vh;
+    padding-right: 10vw;
+    font-family: "montserrat", sans-serif;
+    span {
+      font-family: "nothing you could do", cursive;
+      color: #db5431;
+      font-size: 3rem;
+    }
+  }
 }

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- Header Start -->
+
     <header>
       <nav>
         <img src="./assets/Logo.svg" alt="Logo" class="logo" />
@@ -17,6 +19,11 @@
         </ul>
       </nav>
     </header>
+
+    <!-- Header End -->
+
+    <!-- Start of Hero Section -->
+
     <main>
       <img src="./assets/Hero.svg" alt="Hero" class="hero" />
       <div class="hero-slogan">
@@ -27,19 +34,51 @@
       <img src="./assets/BG.svg" alt="" class="bg" />
     </main>
 
+    <!-- End of Hero section -->
+
+    <!-- Best Seller area -->
+
     <section class="prod-quote">
-      <h1>Best-Sellers</h1>
+      <h1 class="heading">Best-Sellers</h1>
       <img src="./assets/purp-main-back.svg" alt="" class="main-purp-bg" />
       <div class="container card-container">
-        <div class="card"><img src="./assets/barbell 1.svg" alt="" /></div>
-        <div class="card"><img src="./assets/Dumbbell.svg" alt="" /></div>
-        <div class="card"><img src="./assets/Jersy 1.svg" alt="" /></div>
-        <div class="card"><img src="./assets/Tredmill.svg" alt="" /></div>
+        <div class="card" data-tilt>
+          <img src="./assets/barbell 1.svg" alt="" />
+        </div>
+        <div class="card" data-tilt>
+          <img src="./assets/Dumbbell.svg" alt="" />
+        </div>
+        <div class="card" data-tilt>
+          <img src="./assets/Jersy 1.svg" alt="" />
+        </div>
+        <div class="card" data-tilt>
+          <img src="./assets/Tredmill.svg" alt="" />
+        </div>
       </div>
       <a href="#">Visit Shop <img src="./assets/Arrow 1.svg" alt="" /></a>
     </section>
 
-    <section class="about-us"></section>
+    <!-- End of Best Seller area -->
+
+    <!-- Start of About us section -->
+
+    <section class="about-us">
+      <h1 class="heading">About Us</h1>
+      <img
+        class="kratos-face"
+        src="./assets/kratos-big.svg"
+        alt="Kratos-big-logo"
+      />
+      <p>
+        Inspired By <span>Kratos</span> the Greek God of Strength we are a bunch
+        of Individuals mainly focusing on providing best class equipment for
+        your daily fitness needs. Find The inner <span>Kratos</span> in You!
+      </p>
+    </section>
+
+    <!-- End of About us section -->
+
+    <!-- Start of gsap anim -->
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
@@ -83,5 +122,6 @@
           duration: 1.5,
         });
     </script>
+    <!-- end of gsap anim -->
   </body>
 </html>
