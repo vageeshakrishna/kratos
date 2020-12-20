@@ -202,13 +202,13 @@ main .bg {
 
 .prod-quote .card:hover img {
   scale: 1.2;
-  -webkit-transform-origin: center;
-          transform-origin: center;
   -webkit-filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
           filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
 }
 
 .prod-quote .card img {
+  -webkit-transform-origin: right;
+          transform-origin: right;
   position: absolute;
   height: 20vh;
   top: 50%;
@@ -266,5 +266,108 @@ main .bg {
   font-family: "nothing you could do", cursive;
   color: #db5431;
   font-size: 3rem;
+}
+
+.bottom-path {
+  position: absolute;
+  top: 0vh;
+  z-index: -1;
+  width: 100%;
+}
+
+.contact {
+  position: relative;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contact #email {
+  margin-top: 10vh;
+  width: 50vw;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.contact .bottom {
+  position: absolute;
+  background-color: #6c63ff;
+  border: 0.5vh solid #6c63ff;
+}
+
+.contact .bottom:hover:before {
+  background: #db5431;
+  border: 3px soild #6c63ff;
+  width: 150%;
+}
+
+.input-field {
+  position: relative;
+  width: 90%;
+  height: 10vh;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.input-field input {
+  height: 10vh;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  padding-top: 6vh;
+  background: transparent;
+}
+
+.input-field input:focus ~ label span,
+.input-field input:valid ~ label span {
+  -webkit-transform: translateY(-2vh);
+          transform: translateY(-2vh);
+  font-size: 1rem;
+  color: #db5431;
+}
+
+.input-field input:focus ~ label::after,
+.input-field input:valid ~ label::after {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.input-field label {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  bottom: 0;
+}
+
+.input-field label::after {
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #db5431;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.input-field span {
+  position: absolute;
+  font-size: 1.5rem;
+  width: 100%;
+  left: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  bottom: 1vh;
 }
 /*# sourceMappingURL=style.css.map */
