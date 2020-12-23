@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+
+    <header>
+      <nav>
+        <img src="./assets/Logo.svg" alt="Logo" class="logo" />
+        <ul>
+          <li>Shop</li>
+          <li>Contact</li>
+          <li>Log In</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Header End -->
+
+    <!-- Start of Hero Section -->
+
+    <main>
+      <img src="./assets/Hero.svg" alt="Hero" class="hero" />
+      <div class="hero-slogan">
+        <h1 class="slogan">Fight for Fitness</h1>
+        <h3 class="slogan">No More Excuses to compromise Fitness</h3>
+        <button class="cta slogan">Sign Up</button>
+      </div>
+      <img src="./assets/BG.svg" alt="" class="bg" />
+    </main>
+
+    <!-- End of Hero section -->
+
+    <!-- Best Seller area -->
+
+    <section class="prod-quote">
+      <h1 class="heading">Best-Sellers</h1>
+      <img src="./assets/purp-main-back.svg" alt="" class="main-purp-bg" />
+      <div class="container card-container">
+        <div class="card">
+          <img src="./assets/barbell 1.svg" alt="" />
+        </div>
+        <div class="card">
+          <img src="./assets/Dumbbell.svg" alt="" />
+        </div>
+        <div class="card">
+          <img src="./assets/Jersy 1.svg" alt="" />
+        </div>
+        <div class="card">
+          <img src="./assets/Tredmill.svg" alt="" />
+        </div>
+      </div>
+      <a href="#">Visit Shop <img src="./assets/Arrow 1.svg" alt="" /></a>
+    </section>
+
+    <!-- End of Best Seller area -->
+
+    <!-- Start of About us section -->
+
+    <section class="about-us">
+      <h1 class="heading">About Us</h1>
+      <img
+        class="kratos-face"
+        src="./assets/kratos-big.svg"
+        alt="Kratos-big-logo"
+      />
+      <p>
+        Inspired By <span>Kratos</span> the Greek God of Strength we are a bunch
+        of Individuals mainly focusing on providing best class equipment for
+        your daily fitness needs. Find The inner <span>Kratos</span> in You!
+      </p>
+    </section>
+
+    <!-- End of About us section -->
+
+    <!-- Start of Contact section -->
+    <section class="contact">
+      <h1 class="heading">Contact Us</h1>
+      <div class="input-field" id="email">
+        <input
+          type="text"
+          name="username"
+          pattern="[A-Za-z \s]{2,25}"
+          autocomplete="off"
+          required
+        />
+        <label for="email"><span>Email</span></label>
+      </div>
+      <button class="cta bottom">Sign Up</button>
+      <img src="./assets/bottom-path.svg" alt="" class="bottom-path" />
+    </section>
+    <!-- End of contact section -->
+
+    <!-- Start of gsap anim -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var tl = new gsap.timeline({});
+      var tl2 = new gsap.timeline({});
+      tl.from(".bg", {
+        scale: 0,
+        duration: 2,
+        ease: Power1.easeInOut,
+        transformOrigin: "center",
+      })
+        .from(
+          ".hero",
+          {
+            scale: 0,
+            opacity: 0,
+            duration: 2,
+            ease: Back.easeOut.config(1.7),
+            yoyo: true,
+          },
+          "=-1.4"
+        )
+        .from(
+          ".slogan",
+          {
+            opacity: 0,
+            y: 40,
+            stagger: 0.3,
+          },
+          "=-.4"
+        )
+        .to(".hero", {
+          y: 10,
+          yoyo: true,
+          repeat: -1,
+          ease: Power1.easeInOut,
+          duration: 1.5,
+        });
+    </script>
+    <!-- end of gsap anim -->
+  </body>
+</html>
