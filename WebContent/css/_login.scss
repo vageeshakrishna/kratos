@@ -1,0 +1,42 @@
+.container {
+  padding: 0 10vw;
+  width: 100%;
+  @include flex;
+}
+.log {
+  margin: 5vh auto 0 auto;
+  @include flex;
+}
+.info,
+.login-form {
+  background-color: rgba(196, 196, 196, 0.4);
+  border-radius: 1.5rem;
+  height: 80vh;
+  @include flex;
+  flex-direction: column;
+}
+.info {
+  width: 30vw;
+  padding: 10vh 0;
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+.logkratos {
+  height: 30vh;
+}
+
+.login-form {
+  h1 {
+    font-size: 2.5rem;
+    position: relative;
+    &:after {
+      content: url("../assets/Vector\ 6.svg");
+      position: absolute;
+      right: -40%;
+      top: 65%;
+    }
+  }
+  width: 45vw;
+  padding: 10vh;
+}

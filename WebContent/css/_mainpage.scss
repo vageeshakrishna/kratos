@@ -1,23 +1,21 @@
 header {
   height: 10vh;
-
   width: 100%;
-  nav {
-    height: 10vh;
-    padding: 0 10vw;
+}
+nav {
+  height: 10vh;
+  padding: 0 10vw;
+  @include flex;
+  width: 100%;
+  .logo {
+    height: 6vh;
+  }
+  ul {
     @include flex;
-    width: 100%;
-    .logo {
-      height: 6vh;
-    }
-    ul {
-      @include flex;
-      width: 40vh;
-      font-family: "montserrat", sans-serif;
-    }
+    width: 40vh;
+    font-family: "montserrat", sans-serif;
   }
 }
-
 main {
   h1 {
     font-size: 4.5rem;
