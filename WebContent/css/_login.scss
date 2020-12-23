@@ -11,7 +11,7 @@
 .login-form {
   background-color: rgba(196, 196, 196, 0.4);
   border-radius: 1.5rem;
-  height: 80vh;
+  height: 85vh;
   @include flex;
   flex-direction: column;
 }
@@ -33,10 +33,10 @@
     &:after {
       content: url("../assets/Vector\ 6.svg");
       position: absolute;
-      right: -40%;
+      right: -30%;
       top: 65%;
     }
   }
   width: 45vw;
-  padding: 10vh;
+  padding: 8vh;
 }
