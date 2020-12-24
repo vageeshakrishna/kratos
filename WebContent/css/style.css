@@ -16,10 +16,15 @@ body {
   color: white;
   position: relative;
   font-family: "nothing you could do", cursive;
+  scroll-behavior: smooth;
 }
 
 ul {
   list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -105,10 +110,6 @@ main .bg {
   top: 50vh;
 }
 
-.container {
-  padding: 0 10vw;
-}
-
 .cta {
   padding: 3vh 5vw;
   margin: 5% 0 0 50%;
@@ -153,6 +154,7 @@ main .bg {
 }
 
 .prod-quote {
+  margin-top: 20vh;
   min-height: 100vh;
   position: relative;
 }
@@ -171,19 +173,28 @@ main .bg {
 }
 
 .prod-quote .card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 2vw;
+  -ms-grid-columns: ()[1fr];
+      grid-template-columns: repeat(1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  margin: 10vh 0 0 5vw;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.prod-quote .card-container:-webkit-scrollbar {
+  display: none;
 }
 
 .prod-quote .card {
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  grid-column: auto;
   margin-top: 10%;
   height: 60vh;
   width: 17vw;
@@ -293,13 +304,13 @@ main .bg {
           transform: translateX(-50%);
 }
 
-.contact .bottom {
+.contact .bottom-btn {
   position: absolute;
   background-color: #6c63ff;
   border: 0.5vh solid #6c63ff;
 }
 
-.contact .bottom:hover:before {
+.contact .bottom-btn:hover:before {
   background: #db5431;
   border: 3px soild #6c63ff;
   width: 150%;
@@ -372,7 +383,7 @@ main .bg {
   bottom: 1vh;
 }
 
-.container {
+.container-log {
   padding: 0 10vw;
   width: 100%;
   display: -webkit-box;
@@ -448,5 +459,35 @@ main .bg {
   position: absolute;
   right: -30%;
   top: 65%;
+}
+
+.path {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 60vh;
+}
+
+.arrow-left,
+.arrow-right {
+  font-size: 3rem;
+  position: absolute;
+  top: -10%;
+  right: 10%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.arrow-left {
+  margin-right: 5vw;
 }
 /*# sourceMappingURL=style.css.map */

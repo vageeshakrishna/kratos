@@ -15,6 +15,7 @@ body {
   color: white;
   position: relative;
   font-family: "nothing you could do", cursive;
+  scroll-behavior: smooth;
 }
 ul {
   list-style-type: none;
@@ -29,3 +30,4 @@ ul {
 @import "mainpage";
 @import "login";
 @import "signup";
+@import "Umain";

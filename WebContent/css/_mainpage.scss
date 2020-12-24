@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 header {
   height: 10vh;
   width: 100%;
@@ -56,9 +59,6 @@ main {
     top: 50vh;
   }
 }
-.container {
-  padding: 0 10vw;
-}
 .cta {
   padding: 3vh 5vw;
   margin: 5% 0 0 50%;
@@ -94,6 +94,7 @@ main {
   }
 }
 .prod-quote {
+  margin-top: 20vh;
   min-height: 100vh;
   position: relative;
   .main-purp-bg {
@@ -108,10 +109,22 @@ main {
     margin: 10% 0 0 10%;
   }
   .card-container {
-    @include flex;
-    justify-content: space-between;
+    display: grid;
+    grid-column-gap: 2vw;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr;
+    margin: 10vh 0 0 5vw;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    &:-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   .card {
+    grid-row: 1/1;
+    grid-column: auto;
     margin-top: 10%;
     height: 60vh;
     width: 17vw;
@@ -195,7 +208,7 @@ main {
     margin-left: 50%;
     transform: translateX(-50%);
   }
-  .bottom {
+  .bottom-btn {
     position: absolute;
     background-color: #6c63ff;
     border: 0.5vh solid #6c63ff;
