@@ -490,4 +490,8 @@ main .bg {
 .arrow-left {
   margin-right: 5vw;
 }
+
+#prod-back {
+  height: 60vh;
+}
 /*# sourceMappingURL=style.css.map */
