@@ -10,11 +10,11 @@
     <nav>
       <img src="./assets/Logo.svg" alt="" class="logo" />
     </nav>
-    <section class="container-login log">
+    <section class="container-login log container">
       <div class="info">
-        <img src="./assets/kratos-big.svg" class="logkratos" alt="" />
-        <h3>Already familier with this page?</h3>
-        <button class="cta">Log In</button>
+        <img src="./assets/kratos-big.svg" class="logkratos anim" alt="" />
+        <h3 class="anim">Already familier with this page?</h3>
+        <button class="cta anim">Log In</button>
       </div>
       <div class="login-section">
         <form action="adduser.jsp" method="post" class="login-form">
@@ -63,5 +63,23 @@
         </form>
       </div>
     </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var tl = new gsap.timeline({});
+      tl.from(
+        ".anim",
+        { opacity: 0, y: 40, stagger: 0.3, duration: 1 },
+        "=+.8"
+      ).from(
+        ".input-field",
+        { opacity: 0, y: -40, stagger: 0.3, duration: 1 },
+        "=-1.5"
+      );
+    </script>
   </body>
 </html>

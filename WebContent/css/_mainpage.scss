@@ -131,7 +131,7 @@ main {
     background-color: #c4c4c4;
     z-index: 1;
     position: relative;
-    transition: all 0.8s ease;
+    transition: all 1s ease;
     &:hover {
       transform: translateY(-1.5vh);
       box-shadow: -10px 10px 20px rgba($color: rgb(44, 15, 44), $alpha: 0.8);
@@ -231,7 +231,7 @@ main {
     height: 10vh;
     width: 100%;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
     outline: none;
     padding-top: 6vh;
     background: transparent;
@@ -275,4 +275,16 @@ main {
     transition: 0.4s ease-in-out;
     bottom: 1vh;
   }
+}
+
+[data-scroll] {
+  transition: 1s ease-in-out;
+}
+[data-scroll="in"] {
+  transform: translatex(0);
+  opacity: 1;
+}
+[data-scroll="out"] {
+  transform: translatey(-200vh);
+  opacity: 0;
 }

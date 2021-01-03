@@ -15,7 +15,7 @@
         <ul>
           <li>Shop</li>
           <li>Contact</li>
-          <li>Log In</li>
+          <li><a href="./login.html">Log In</a></li>
         </ul>
       </nav>
     </header>
@@ -42,20 +42,19 @@
       <h1 class="heading">Best-Sellers</h1>
       <img src="./assets/purp-main-back.svg" alt="" class="main-purp-bg" />
       <div class="container card-container">
-        <div class="card">
-          <img src="./assets/barbell 1.svg" alt="" />
+        <div class="card" data-scroll>
+          <img src="./assets/barbell.svg" alt="" />
         </div>
-        <div class="card">
+        <div class="card" data-scroll>
           <img src="./assets/Dumbbell.svg" alt="" />
         </div>
-        <div class="card">
-          <img src="./assets/Jersy 1.svg" alt="" />
+        <div class="card" data-scroll>
+          <img src="./assets/Jersy.svg" alt="" />
         </div>
-        <div class="card">
+        <div class="card" data-scroll>
           <img src="./assets/Tredmill.svg" alt="" />
         </div>
       </div>
-      <a href="#">Visit Shop <img src="./assets/Arrow 1.svg" alt="" /></a>
     </section>
 
     <!-- End of Best Seller area -->
@@ -103,7 +102,13 @@
       integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
     <script>
+      ScrollOut({
+        threshold: 0.5,
+      });
+
       var tl = new gsap.timeline({});
       var tl2 = new gsap.timeline({});
       tl.from(".bg", {
