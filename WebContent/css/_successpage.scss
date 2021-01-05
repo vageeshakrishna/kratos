@@ -1,0 +1,21 @@
+.success {
+  height: 80vh;
+  @include flex;
+  padding: 10vh 10vw 0 10vw;
+  .kratos-head,
+  .thanks {
+    height: inherit;
+    @include flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  img {
+    height: 30vh;
+    pointer-events: none;
+  }
+  h2,
+  h1 {
+    font-size: 2rem;
+    pointer-events: none;
+  }
+}

@@ -173,6 +173,7 @@ main .bg {
 }
 
 .prod-quote .card-container {
+  height: 80vh;
   display: -ms-grid;
   display: grid;
   grid-column-gap: 2vw;
@@ -548,8 +549,8 @@ main .bg {
           align-items: flex-start;
   position: relative;
   overflow: hidden;
-  -webkit-filter: backdrop-filter(10px);
-          filter: backdrop-filter(10px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, rgba(123, 105, 230, 0.4)), color-stop(95%, rgba(34, 29, 64, 0.4)));
   background: linear-gradient(to bottom, rgba(123, 105, 230, 0.4) 2%, rgba(34, 29, 64, 0.4) 95%);
 }
@@ -562,6 +563,7 @@ main .bg {
           transform: translateY(-50%);
   -webkit-filter: drop-shadow(-10px 10px 8px rgba(0, 0, 0, 0.4));
           filter: drop-shadow(-10px 10px 8px rgba(0, 0, 0, 0.4));
+  pointer-events: none;
 }
 
 .card-info {
@@ -611,6 +613,7 @@ main .bg {
   position: absolute;
   height: 100%;
   z-index: -1;
+  pointer-events: none;
 }
 
 .vec-left {
@@ -619,5 +622,50 @@ main .bg {
 
 .vec-right {
   right: 20%;
+}
+
+.success {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10vh 10vw 0 10vw;
+}
+
+.success .kratos-head,
+.success .thanks {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.success img {
+  height: 30vh;
+  pointer-events: none;
+}
+
+.success h2,
+.success h1 {
+  font-size: 2rem;
+  pointer-events: none;
 }
 /*# sourceMappingURL=style.css.map */

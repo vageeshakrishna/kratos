@@ -109,6 +109,7 @@ main {
     margin: 10% 0 0 10%;
   }
   .card-container {
+    height: 80vh;
     display: grid;
     grid-column-gap: 2vw;
     grid-template-columns: repeat(1fr);

@@ -7,7 +7,7 @@
   align-items: flex-start;
   position: relative;
   overflow: hidden;
-  filter: backdrop-filter(10px);
+  backdrop-filter: blur(20px);
   background: linear-gradient(
     to bottom,
     rgba(123, 105, 230, 0.4) 2%,
@@ -20,6 +20,7 @@
   height: 25vh;
   transform: translateY(-50%);
   filter: drop-shadow(-10px 10px 8px rgba(0, 0, 0, 0.4));
+  pointer-events: none;
 }
 .card-info {
   margin: 8vh 0 0 15vw;
@@ -52,6 +53,7 @@
   position: absolute;
   height: 100%;
   z-index: -1;
+  pointer-events: none;
 }
 .vec-left {
   left: 20%;
