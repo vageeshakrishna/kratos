@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="./assets/Logo.svg" alt="Kratos.logo" class="logo" />
+    </nav>
+    <section class="payment-section">
+      <div class="debit-card">
+        <img src="./assets/Chip.svg" alt="" class="chip" />
+        <form action="#" class="card-info">
+          <div class="input-field" id="cnumber">
+            <input
+              type="text"
+              name="cardno"
+              pattern="[A-Za-z@. \s]{2,25}"
+              autocomplete="off"
+              required
+            />
+            <label for="cardno"><span>Card Number</span></label>
+          </div>
+          <div class="input-field" id="expiry">
+            <input
+              type="text"
+              name="expiry"
+              pattern="[A-Za-z@. \s]{2,25}"
+              autocomplete="off"
+              required
+            />
+            <label for="expiry"><span>Expiry Date</span></label>
+          </div>
+          <div class="input-field" id="cvv">
+            <input
+              type="text"
+              name="cvv"
+              pattern="[A-Za-z@. \s]{2,25}"
+              autocomplete="off"
+              required
+            />
+            <label for="cvv"><span>C V V</span></label>
+          </div>
+          <div class="input-field" id="nameoncard">
+            <input
+              type="text"
+              name="nameoncard"
+              pattern="[A-Za-z@. \s]{2,25}"
+              autocomplete="off"
+              required
+            />
+            <label for="nameoncard"><span>Name on Card</span></label>
+          </div>
+          <button class="cta form-btn">Proceed</button>
+        </form>
+      </div>
+    </section>
+    <img src="./assets/card-background-vector.svg" alt="" class="bg" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var t1 = new gsap.timeline();
+      t1.from(".debit-card", { y: 100, opacity: 0, duration: 1 }, "+=1.5")
+        .from(
+          ".bg",
+          {
+            x: -100,
+            opacity: 0,
+            duration: 2,
+          },
+          "-=1.8"
+        )
+        .from(
+          ".input-field",
+          {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.3,
+          },
+          "-=1"
+        )
+        .from(".chip", { y: 100, opacity: 0, duration: 1 }, "-=1.3")
+        .to(".chip", {
+          y: 5,
+          yoyo: true,
+          repeat: -1,
+          ease: Power1.easeInOut,
+          duration: 1.5,
+        });
+    </script>
+  </body>
+</html>

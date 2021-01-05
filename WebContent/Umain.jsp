@@ -20,9 +20,7 @@
 
 		<div class="prod-quote">
 			<div class="container card-container">
-				<span class="arrow-left" id="left" onclick="scrollleft(gear)"><</span>
-				<span class="arrow-right" id="right">></span>
-				<%
+			<%
 				try {
 					Class.forName("com.mysql.jdbc.Driver");
 					String url = "jdbc:mysql://localhost/kratos";
@@ -34,6 +32,8 @@
 					ResultSet rs = stmt.executeQuery(query);
 					while (rs.next()) {
 				%>
+				<span class="arrow-left" id="left" onclick="scrollleft(gear)"><</span>
+				<span class="arrow-right" id="right">></span>
 				<div class="card">
 					<img src=<%=rs.getString("img")%> alt="" />
 				</div>
