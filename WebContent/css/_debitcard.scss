@@ -6,15 +6,18 @@
   @include flex;
   align-items: flex-start;
   position: relative;
+  overflow: hidden;
+  filter: backdrop-filter(10px);
   background: linear-gradient(
     to bottom,
-    rgba(123, 105, 230, 1) 2%,
-    rgba(34, 29, 64, 1) 95%
+    rgba(123, 105, 230, 0.4) 2%,
+    rgba(34, 29, 64, 0.4) 95%
   );
 }
 .chip {
   position: absolute;
   top: 50%;
+  height: 25vh;
   transform: translateY(-50%);
   filter: drop-shadow(-10px 10px 8px rgba(0, 0, 0, 0.4));
 }
@@ -44,4 +47,15 @@
   bottom: -5vh;
   width: 100%;
   z-index: -1;
+}
+.card-vec {
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+}
+.vec-left {
+  left: 20%;
+}
+.vec-right {
+  right: 20%;
 }

@@ -547,13 +547,17 @@ main .bg {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #7b69e6), color-stop(95%, #221d40));
-  background: linear-gradient(to bottom, #7b69e6 2%, #221d40 95%);
+  overflow: hidden;
+  -webkit-filter: backdrop-filter(10px);
+          filter: backdrop-filter(10px);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, rgba(123, 105, 230, 0.4)), color-stop(95%, rgba(34, 29, 64, 0.4)));
+  background: linear-gradient(to bottom, rgba(123, 105, 230, 0.4) 2%, rgba(34, 29, 64, 0.4) 95%);
 }
 
 .chip {
   position: absolute;
   top: 50%;
+  height: 25vh;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-filter: drop-shadow(-10px 10px 8px rgba(0, 0, 0, 0.4));
@@ -601,5 +605,19 @@ main .bg {
   bottom: -5vh;
   width: 100%;
   z-index: -1;
+}
+
+.card-vec {
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+}
+
+.vec-left {
+  left: 20%;
+}
+
+.vec-right {
+  right: 20%;
 }
 /*# sourceMappingURL=style.css.map */
