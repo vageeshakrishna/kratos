@@ -192,7 +192,8 @@ main .bg {
   display: none;
 }
 
-.prod-quote .card {
+.prod-quote .card,
+.prod-quote a {
   -ms-grid-row: 1;
   grid-row: 1/1;
   grid-column: auto;
@@ -206,20 +207,23 @@ main .bg {
   transition: all 1s ease;
 }
 
-.prod-quote .card:hover {
+.prod-quote .card:hover,
+.prod-quote a:hover {
   -webkit-transform: translateY(-1.5vh);
           transform: translateY(-1.5vh);
   -webkit-box-shadow: -10px 10px 20px rgba(44, 15, 44, 0.8);
           box-shadow: -10px 10px 20px rgba(44, 15, 44, 0.8);
 }
 
-.prod-quote .card:hover img {
+.prod-quote .card:hover img,
+.prod-quote a:hover img {
   scale: 1.2;
   -webkit-filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
           filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
 }
 
-.prod-quote .card img {
+.prod-quote .card img,
+.prod-quote a img {
   -webkit-transform-origin: right;
           transform-origin: right;
   position: absolute;
@@ -230,27 +234,6 @@ main .bg {
           transform: translate(50%, -50%);
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
-}
-
-.prod-quote a {
-  position: absolute;
-  right: 20%;
-  bottom: 0;
-  font-size: 2.5rem;
-}
-
-.prod-quote a:hover img {
-  -webkit-transform: translateX(2vw);
-          transform: translateX(2vw);
-}
-
-.prod-quote a img {
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-  position: absolute;
-  height: 5vh;
-  right: -40%;
-  top: 5%;
 }
 
 .about-us {
@@ -625,7 +608,7 @@ main .bg {
 }
 
 .success {
-  height: 80vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,7 +618,7 @@ main .bg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10vh 10vw 0 10vw;
+  padding: 0 10vw 0 10vw;
 }
 
 .success .kratos-head,
@@ -665,7 +648,18 @@ main .bg {
 
 .success h2,
 .success h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   pointer-events: none;
+  font-weight: normal;
+}
+
+.line {
+  position: absolute;
+  width: 5px;
+  height: 110%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#db5431), to(#636cff));
+  background: linear-gradient(#db5431, #636cff);
+  left: 50%;
+  bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */

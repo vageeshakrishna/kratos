@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+li {
+  list-style: none;
+}
+
+nav {
+  padding: 10vh 0;
+  background: #242c33;
+  width: 18vw;
+  height: 100vh;
+  @include flex;
+  flex-direction: column;
+  float: left;
+  .logo {
+    height: 8vh;
+  }
+  .nav-link {
+    margin-top: 15vh;
+    font-size: 1.5rem;
+    color: white;
+    font-family: "nothing you could do", cursive;
+    .link {
+      padding: 3vh 2vw;
+      margin: 5vh 0;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background: rgba($color: #000000, $alpha: 0.2);
+      }
+    }
+  }
+}
+.active {
+  background: rgba($color: #000000, $alpha: 0.2);
+}
+body {
+  background: #202020;
+}
+section {
+  width: auto;
+  margin-left: 18vw;
+  height: 100vh;
+  position: relative;
+  .logo-big {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+}

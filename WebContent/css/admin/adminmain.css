@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nothing+You+Could+Do&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "montserrat", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  padding: 10vh 0;
+  background: #242c33;
+  width: 18vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  float: left;
+}
+
+nav .logo {
+  height: 8vh;
+}
+
+nav .nav-link {
+  margin-top: 15vh;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "nothing you could do", cursive;
+}
+
+nav .nav-link .link {
+  padding: 3vh 2vw;
+  margin: 5vh 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav .nav-link .link:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background: #202020;
+}
+
+section {
+  width: auto;
+  margin-left: 18vw;
+  height: 100vh;
+  position: relative;
+}
+
+section .logo-big {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+/*# sourceMappingURL=adminmain.css.map */

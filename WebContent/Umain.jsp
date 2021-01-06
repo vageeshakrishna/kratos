@@ -34,9 +34,10 @@
 				%>
 				<span class="arrow-left" id="left" onclick="scrollleft(gear)"><</span>
 				<span class="arrow-right" id="right">></span>
-				<div class="card">
+				
+				<a href = "prod-desc.jsp?pname=<%=rs.getString("pname")%>"><div class="card">
 					<img src=<%=rs.getString("img")%> alt="" />
-				</div>
+				</div></a>
 				<%
 				}
 				%>
@@ -67,9 +68,9 @@
 					ResultSet rs = stmt.executeQuery(query);
 					while (rs.next()) {
 				%>
-				<div class="card">
+				<a href = "prod-desc.jsp?pname=<%=rs.getString("pname")%>"><div class="card">
 					<img src=<%=rs.getString("img")%> alt="" />
-				</div>
+				</div></a>
 				<%
 				}
 				%>
@@ -100,11 +101,11 @@
 					ResultSet rs = stmt.executeQuery(query);
 					while (rs.next()) {
 				%>
-				<div class="card">
-					<img src=./assets/CrossFit.svg alt="" /> <img
+				<a href = "prod-desc.jsp?pname=<%=rs.getString("pname")%>"><div class="card">
+					 <img
 						src=<%=rs.getString("img")%> alt="" />
 
-				</div>
+				</div></a>
 				<%
 				}
 				%>

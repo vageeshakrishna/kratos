@@ -10,6 +10,9 @@ pageEncoding="ISO-8859-1"%>
   <body>
   <%@page import="com.UserDao,com.*,java.util.*,java.sql.*"%>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<%
+		String name = request.getParameter("pname");
+	%>
     <nav>
       <img src="./assets/Logo.svg" alt="kratos-logo" class="logo" />
       <ul>
@@ -23,7 +26,7 @@ pageEncoding="ISO-8859-1"%>
 					String url = "jdbc:mysql://localhost/kratos";
 					String username = "root";
 					String password = "root";
-					String query = "select * from products where pname='Tredmill'";
+					String query = "select * from products where pname='" + name + "'";
 					Connection conn = DriverManager.getConnection(url, username, password);
 					Statement stmt = conn.createStatement();
 					ResultSet rs = stmt.executeQuery(query);
