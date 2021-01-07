@@ -385,6 +385,11 @@ main .bg {
   opacity: 0;
 }
 
+.product-form {
+  height: 80vh;
+  width: 50vw;
+}
+
 .container-log {
   padding: 0 10vw;
   width: 100%;

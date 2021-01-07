@@ -11,7 +11,7 @@
 	<jsp:useBean id="u" class="com.User"></jsp:useBean>
 	<jsp:setProperty property="*" name="u" />
 	<%
-		int i = UserDao.addProduct(u);
+		int i = UserDao.addUserDefect(u);
 		if (i > 0) {
 			response.sendRedirect("Umain.html");
 		} else {

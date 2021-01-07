@@ -49,9 +49,59 @@ public class UserDao {
 		int status = 0;
 		try {
 			Connection con = getConnection();
-			PreparedStatement ps = con.prepareStatement("update products set quantity = quantity - ? where pname = ?");
-			ps.setInt(1, u.getQuantity());
-			ps.setString(2, u.getPname());
+			PreparedStatement ps = con.prepareStatement("insert into product (pname,desc,price,quantity,img,category) values(?,?,?,?,?,?)");
+			ps.setString(1, u.getPname());
+			ps.setString(2, u.getDesc());
+			ps.setInt(3, u.getPrice());
+			ps.setInt(4, u.getQuantity());
+			ps.setString(5, u.getImg());
+			ps.setString(6, u.getCategory());
+			status = ps.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return status;
+	}
+	public static int addUserDefect(User u) {
+		int status = 0;
+		try {
+			Connection con = getConnection();
+			PreparedStatement ps = con.prepareStatement("insert into defectreport(prodname,defectdesc) values(?,?)");
+			ps.setString(1, u.getPname());
+			ps.setString(2, u.getDefectdesc());
+			status = ps.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return status;
+	}
+	public static int acceptUserDefect(String pname,String defectdesc) {
+		int status = 0;
+		try {
+			Connection con = getConnection();
+			PreparedStatement ps = con.prepareStatement("insert into resolveddefect values('"+ pname +"','"+ defectdesc +"')");
+			status = ps.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return status;
+	}
+	public static int rejectUserDefect(String pname,String defectdesc) {
+		int status = 0;
+		try {
+			Connection con = getConnection();
+			PreparedStatement ps = con.prepareStatement("insert into rejecteddefect values('"+ pname +"','"+ defectdesc +"')");
+			status = ps.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return status;
+	}
+	public static int removeDefect(String pname) {
+		int status = 0;
+		try {
+			Connection con = getConnection();
+			PreparedStatement ps = con.prepareStatement("delete from defectreport where prodname='"+pname+"'");
 			status = ps.executeUpdate();
 		} catch (Exception e) {
 			System.out.println(e);

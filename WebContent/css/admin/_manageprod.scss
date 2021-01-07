@@ -100,6 +100,7 @@
 }
 .flatTable {
   width: 100%;
+  height: 50vh;
   min-width: 500px;
   border-collapse: collapse;
   font-weight: bold;
@@ -127,7 +128,13 @@
 .flatTable .controlTd {
   position: relative;
   width: 80px;
-  background: url(https://i.imgur.com/9Q5f6cv.png) center center no-repeat;
+  background: url("../../assets/checkmark.svg") center center no-repeat;
+  cursor: pointer;
+}
+.flatTable .rejectTd {
+  position: relative;
+  width: 80px;
+  background: url("../../assets/cancel.svg") center center no-repeat;
   cursor: pointer;
 }
 .flatTable .headingTr {
@@ -203,4 +210,8 @@ tr:nth-child(3) .settingsIcon {
 }
 .openIcon {
   width: 80px;
+}
+.tabledefect {
+  height: 50vh;
+  overflow-y: scroll;
 }
