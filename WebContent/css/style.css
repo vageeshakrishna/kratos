@@ -314,6 +314,7 @@ main .bg {
   width: 100%;
   border: none;
   border-bottom: 2px solid white;
+  color: inherit;
   outline: none;
   padding-top: 6vh;
   background: transparent;
@@ -524,14 +525,18 @@ main .bg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 40vh;
+  height: 60vh;
   position: absolute;
+  width: 30vw;
   top: 20vh;
-  right: 60%;
+  right: 40%;
 }
 
 .debit-card {

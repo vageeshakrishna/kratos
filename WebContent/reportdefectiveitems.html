@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in to continue</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="./assets/Logo.svg" alt="" class="logo" />
+    </nav>
+    <section class="container-login log container">
+      <div class="info">
+        <img src="./assets/kratos-big.svg" class="logkratos anim" alt="" />
+        <h3 class="anim">Already familier with this page?</h3>
+        <button class="cta anim">Log In</button>
+      </div>
+      <div class="login-section">
+        <form action="adduser.jsp" method="post" class="login-form">
+          <h1>Sign Up</h1>
+          <div class="input-field" id="name">
+            <input
+              type="text"
+              name="name"
+              pattern="[A-Za-z \s]{2,25}"
+              autocomplete="off"
+              required
+            />
+            <label for="name"><span>Name</span></label>
+          </div>
+          <div class="input-field" id="email">
+            <input
+              type="email"
+              name="email"
+              pattern="[A-Za-z@. \s]{2,25}"
+              autocomplete="off"
+              required
+            />
+            <label for="email"><span>Email</span></label>
+          </div>
+          <div class="input-field" id="pass">
+            <input
+              type="password"
+              name="password"
+              pattern="[A-Za-z0-9 \s]{2,25}"
+              autocomplete="off"
+              required
+            />
+            <label for="email"><span>Password</span></label>
+          </div>
+          <div class="input-field" id="pass">
+            <input
+              type="password"
+              name="password"
+              pattern="[A-Za-z0-9 \s]{2,25}"
+              autocomplete="off"
+              required
+            />
+            <label for="email"><span> Confirm Password</span></label>
+          </div>
+          <button class="cta">Report</button>
+        </form>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var tl = new gsap.timeline({});
+      tl.from(
+        ".anim",
+        { opacity: 0, y: 40, stagger: 0.3, duration: 1 },
+        "=+.8"
+      ).from(
+        ".input-field",
+        { opacity: 0, y: -40, stagger: 0.3, duration: 1 },
+        "=-1.5"
+      );
+    </script>
+  </body>
+</html>

@@ -13,7 +13,8 @@
 	<nav>
 		<img src="./assets/Logo.svg" alt="" class="logo" />
 		<ul>
-			<li>Log Out</li>
+			<a href = "reportdefectiveitems.html"><li>Report Defective Items</li></a>
+			<a href = "index.html"><li>Log Out</li></a>
 		</ul>
 	</nav>
 	<main class="quote">

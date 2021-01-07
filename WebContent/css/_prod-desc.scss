@@ -10,10 +10,12 @@
   margin-top: 0;
   .description {
     @include flex;
+    justify-content: center;
     flex-direction: column;
-    height: 40vh;
+    height: 60vh;
     position: absolute;
+    width: 30vw;
     top: 20vh;
-    right: 60%;
+    right: 40%;
   }
 }

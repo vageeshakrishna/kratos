@@ -45,6 +45,7 @@
 				<h3>
 					&#8377
 					<%=rs.getString("price")%></h3>
+					<a href="./paymentpage.html?pname="+'<%=rs.getString("pname")%>'+"><button class="cta">Purchase</button></a>
 			</div>
 		</div>
 
