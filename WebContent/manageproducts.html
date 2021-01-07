@@ -10,19 +10,18 @@
     <nav class="admin-nav">
       <img src="./assets/Logo.svg" alt="" class="logo" />
       <ul class="nav-link">
-        <li class="link active">Manage Products</li>
-        <li class="link">Manage Stock</li>
+        <li class="link active">Manage Stock</li>
         <li class="link">Defective Items</li>
         <li class="link">Log Out</li>
       </ul>
     </nav>
-    <section>
-      <form class="manage">
+    <section class="container">
+      <form class="manage" action="addproduct.jsp">
         <h1>Add or Edit Product</h1>
         <div class="input-field" id="expiry">
           <input
             type="text"
-            name="expiry"
+            name="pname"
             pattern="[A-Za-z@. \s]{2,25}"
             autocomplete="off"
             required
@@ -32,33 +31,14 @@
         <div class="input-field" id="expiry">
           <input
             type="text"
-            name="expiry"
+            name="quantity"
             pattern="[A-Za-z@. \s]{2,25}"
             autocomplete="off"
             required
           />
           <label for="expiry"><span>Expiry Date</span></label>
         </div>
-        <div class="input-field" id="expiry">
-          <input
-            type="text"
-            name="expiry"
-            pattern="[A-Za-z@. \s]{2,25}"
-            autocomplete="off"
-            required
-          />
-          <label for="expiry"><span>Expiry Date</span></label>
-        </div>
-        <div class="input-field" id="expiry">
-          <input
-            type="text"
-            name="expiry"
-            pattern="[A-Za-z@. \s]{2,25}"
-            autocomplete="off"
-            required
-          />
-          <label for="expiry"><span>Expiry Date</span></label>
-        </div>
+        <button class="cta" type="submit">Submit</button>
       </form>
     </section>
   </body>

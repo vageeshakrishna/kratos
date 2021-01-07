@@ -49,11 +49,9 @@ public class UserDao {
 		int status = 0;
 		try {
 			Connection con = getConnection();
-			PreparedStatement ps = con.prepareStatement("insert into products(pname,desc,price,img) values(?,?,?,?)");
-			ps.setString(1, u.getPname());
-			ps.setString(2, u.getDesc());
-			ps.setInt(3, u.getPrice());
-			ps.setString(3, u.getImg());
+			PreparedStatement ps = con.prepareStatement("update products set quantity = quantity - ? where pname = ?");
+			ps.setInt(1, u.getQuantity());
+			ps.setString(2, u.getPname());
 			status = ps.executeUpdate();
 		} catch (Exception e) {
 			System.out.println(e);

@@ -501,8 +501,9 @@ main .bg {
 }
 
 #prod-back {
-  height: 60vh;
+  height: 90vh;
   position: absolute;
+  top: 15vh;
 }
 
 .container {
@@ -511,6 +512,26 @@ main .bg {
 
 .prod-page {
   margin-top: 0;
+}
+
+.prod-page .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 40vh;
+  position: absolute;
+  top: 20vh;
+  right: 60%;
 }
 
 .debit-card {

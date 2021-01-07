@@ -80,4 +80,71 @@ section .logo-big {
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
 }
+
+.input-field {
+  position: relative;
+  width: 90%;
+  height: 10vh;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.input-field input {
+  height: 10vh;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+  padding-top: 6vh;
+  background: transparent;
+}
+
+.input-field input:focus ~ label span,
+.input-field input:valid ~ label span {
+  -webkit-transform: translateY(-2vh);
+          transform: translateY(-2vh);
+  font-size: 1rem;
+  color: #db5431;
+}
+
+.input-field input:focus ~ label::after,
+.input-field input:valid ~ label::after {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.input-field label {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  bottom: 0;
+}
+
+.input-field label::after {
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #db5431;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.input-field span {
+  position: absolute;
+  font-size: 1.5rem;
+  width: 100%;
+  left: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  bottom: 1vh;
+}
 /*# sourceMappingURL=adminmain.css.map */

@@ -2,7 +2,7 @@ package com;
 
 public class User {
 	private String name, email, password, pname, desc, img, category;
-	private int price;
+	private int price,quantity;
 
 	public String getName() {
 		return name;
@@ -66,6 +66,14 @@ public class User {
 
 	public void setPrice(int price) {
 		this.price = price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 }

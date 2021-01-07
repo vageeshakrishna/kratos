@@ -8,16 +8,10 @@
 </head>
 <body>
 <%@page import="com.UserDao"%>
-<%@page import="com.SendEmail"%>
 	<jsp:useBean id="u" class="com.User"></jsp:useBean>
 	<jsp:setProperty property="*" name="u" />
-<%
-		String email = request.getParameter("email");
-		SendEmail mail = new SendEmail();
-		mail.send(email);
-	%>
 	<%
-		int i = UserDao.adduser(u);
+		int i = UserDao.addProduct(u);
 		if (i > 0) {
 			response.sendRedirect("Umain.html");
 		} else {

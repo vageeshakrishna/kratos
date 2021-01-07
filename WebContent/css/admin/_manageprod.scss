@@ -1,0 +1,56 @@
+.input-field {
+  position: relative;
+  width: 90%;
+  height: 10vh;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5vh;
+  input {
+    height: 10vh;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    padding-top: 6vh;
+    background: transparent;
+
+    &:focus ~ label span,
+    &:valid ~ label span {
+      transform: translateY(-2vh);
+      font-size: 1rem;
+      color: #db5431;
+    }
+    &:focus ~ label::after,
+    &:valid ~ label::after {
+      transform: translate(0);
+    }
+  }
+  label {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: 0.4s ease-in-out;
+    bottom: 0;
+
+    &::after {
+      transition: 0.8s ease-in-out;
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-bottom: 3px solid #db5431;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+    }
+  }
+  span {
+    position: absolute;
+    font-size: 1.5rem;
+    width: 100%;
+    left: 0;
+    transition: 0.4s ease-in-out;
+    bottom: 1vh;
+  }
+}
