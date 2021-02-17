@@ -122,35 +122,36 @@ main {
     }
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-  .card,
-  a {
-    grid-row: 1/1;
-    grid-column: auto;
-    margin-top: 10%;
-    height: 60vh;
-    width: 17vw;
-    background-color: #c4c4c4;
-    z-index: 1;
-    position: relative;
-    transition: all 1s ease;
-    &:hover {
-      transform: translateY(-1.5vh);
-      box-shadow: -10px 10px 20px rgba($color: rgb(44, 15, 44), $alpha: 0.8);
-    }
-    &:hover img {
-      scale: 1.2;
-      filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
-    }
+    .card,
+    a {
+      grid-row: 1/1;
+      grid-column: auto;
+      margin-top: 10%;
+      height: 60vh;
+      width: 17vw;
+      background-color: #c4c4c4;
+      backdrop-filter: blur(10px);
+      z-index: 1;
+      position: relative;
+      transition: all 1s ease;
+      &:hover {
+        transform: translateY(-1.5vh);
+        box-shadow: -10px 10px 20px rgba($color: rgb(44, 15, 44), $alpha: 0.8);
+      }
+      &:hover img {
+        scale: 1.2;
+        filter: drop-shadow(-10px 10px 5px rgba(54, 49, 49, 0.4));
+      }
 
-    img {
-      transform-origin: right;
-      position: absolute;
-      height: 20vh;
-      top: 50%;
-      right: 50%;
-      transform: translate(50%, -50%);
-      transition: all 0.8s ease;
+      img {
+        transform-origin: right;
+        position: absolute;
+        height: 20vh;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        transition: all 0.8s ease;
+      }
     }
   }
 }
@@ -210,12 +211,12 @@ main {
 .input-field {
   position: relative;
   width: 90%;
-  height: 10vh;
+  height: 15vh;
   overflow: hidden;
   position: relative;
   margin-top: 5vh;
   input {
-    height: 10vh;
+    height: 15vh;
     width: 100%;
     border: none;
     border-bottom: 2px solid white;

@@ -14,7 +14,7 @@
       <div class="info">
         <img src="./assets/kratos-big.svg" class="logkratos anim" alt="" />
         <h3 class="anim">Dont have an Account?</h3>
-        <button class="cta anim">SignUp</button>
+        <a href="./signup.html"><button class="cta anim">SignUp</button></a>
       </div>
       <div class="login-section">
         <form action="Loginprocess" method="post" class="login-form">
@@ -23,7 +23,7 @@
             <input
               type="text"
               name="email"
-              pattern="[A-Za-z@. \s]{2,25}"
+              pattern="[A-Za-z0-9@. \s]{2,25}"
               autocomplete="off"
               required
             />
@@ -33,7 +33,7 @@
             <input
               type="password"
               name="password"
-              pattern="[A-Za-z \s]{2,25}"
+              pattern="[A-Za-z0-9 \s]{2,25}"
               autocomplete="off"
               required
             />

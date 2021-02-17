@@ -42,7 +42,7 @@ public class Loginprocess extends HttpServlet {
 		String uid = request.getParameter("email");
 		String pwd = request.getParameter("password");
 		if (uid.equals("admin@admin") && pwd.equals("pass") || uid.equals("zod@admin") && pwd.equals("krypton")) {
-			response.sendRedirect("AMain.jsp");
+			response.sendRedirect("adminmain.html");
 		} else {
 			try {
 				Class.forName("com.mysql.jdbc.Driver");

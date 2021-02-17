@@ -10,12 +10,13 @@
 <%@page import="com.UserDao"%>
 	<jsp:useBean id="u" class="com.User"></jsp:useBean>
 	<jsp:setProperty property="*" name="u" />
+
 	<%
-		int i = UserDao.addUserDefect(u);
+		int i = UserDao.addcontact(u);
 		if (i > 0) {
-			response.sendRedirect("success.html");
+			response.sendRedirect("index.html");
 		} else {
-			response.sendRedirect("signup.html");
+			response.sendRedirect("index.html");
 		}
 	%>
 	

@@ -33,8 +33,6 @@
 					ResultSet rs = stmt.executeQuery(query);
 					while (rs.next()) {
 				%>
-				<span class="arrow-left" id="left" onclick="scrollleft(gear)"><</span>
-				<span class="arrow-right" id="right">></span>
 				
 				<a href = "prod-desc.jsp?pname=<%=rs.getString("pname")%>"><div class="card">
 					<img src=<%=rs.getString("img")%> alt="" />
@@ -55,8 +53,6 @@
 		</div>
 		<div class="prod-quote">
 			<div class="container card-container">
-				<span class="arrow-left" id="left"><</span> <span
-					class="arrow-right" id="right">></span>
 				<%
 				try {
 					Class.forName("com.mysql.jdbc.Driver");
@@ -88,8 +84,6 @@
 		</div>
 		<div class="prod-quote">
 			<div class="container card-container" id="cardio">
-				<span class="arrow-left" id="left" onclick="scrollleft('cardio')"><</span>
-				<span class="arrow-right" id="right" onclick="scrollright('cardio')">></span>
 				<%
 				try {
 					Class.forName("com.mysql.jdbc.Driver");

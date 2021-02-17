@@ -13,8 +13,8 @@
       <nav>
         <img src="./assets/Logo.svg" alt="Logo" class="logo" />
         <ul>
-          <li>Shop</li>
-          <li>Contact</li>
+          <a href="Umain.jsp"><li>Shop</li></a>
+          <a href="#contact"><li>Contact</li></a>
           <li><a href="./login.html">Log In</a></li>
         </ul>
       </nav>
@@ -78,21 +78,21 @@
     <!-- End of About us section -->
 
     <!-- Start of Contact section -->
-    <section class="contact">
+    <form class="contact" id="contact" action="addcontact.jsp" method="post">
       <h1 class="heading">Contact Us</h1>
       <div class="input-field" id="email">
         <input
           type="text"
-          name="username"
-          pattern="[A-Za-z \s]{2,25}"
+          name="email"
+          pattern="[A-Za-z@. \s]{2,25}"
           autocomplete="off"
           required
         />
         <label for="email"><span>Email</span></label>
       </div>
-      <button class="cta bottom-btn">Sign Up</button>
+      <button class="cta bottom-btn">Contact</button>
       <img src="./assets/bottom-path.svg" alt="" class="bottom-path" />
-    </section>
+    </form>
     <!-- End of contact section -->
 
     <!-- Start of gsap anim -->
@@ -107,6 +107,7 @@
     <script>
       ScrollOut({
         threshold: 0.5,
+        once:true,
       });
 
       var tl = new gsap.timeline({});

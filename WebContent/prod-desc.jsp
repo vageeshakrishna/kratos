@@ -45,7 +45,7 @@
 				<h3>
 					&#8377
 					<%=rs.getString("price")%></h3>
-					<a href="./paymentpage.html?pname="+'<%=rs.getString("pname")%>'+"><button class="cta">Purchase</button></a>
+					<a href="./paymentpage.jsp?pname=<%=rs.getString("pname")%>&desc=<%=rs.getString("desc")%>&price=<%=rs.getString("price")%>"><button class="cta">Purchase</button></a>
 			</div>
 		</div>
 

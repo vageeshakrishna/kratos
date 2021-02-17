@@ -19,7 +19,7 @@
 	<%
 		int i = UserDao.adduser(u);
 		if (i > 0) {
-			response.sendRedirect("Umain.html");
+			response.sendRedirect("Umain.jsp");
 		} else {
 			response.sendRedirect("signup.html");
 		}

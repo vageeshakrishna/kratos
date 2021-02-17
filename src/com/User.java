@@ -1,7 +1,7 @@
 package com;
 
 public class User {
-	private String name, email, password, pname, desc, img, category,defectdesc;
+	private String name, email, password, pname, desc, img, category,defectdesc,address;
 	private int price,quantity;
 
 	public String getName() {
@@ -82,6 +82,14 @@ public class User {
 
 	public void setDefectdesc(String defectdesc) {
 		this.defectdesc = defectdesc;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 }

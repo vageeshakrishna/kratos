@@ -1,12 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout</title>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
     <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
+
+<body>
+<%@page import="com.UserDao"%>
+<%@page import="com.SendEmail"%>
+<%
+	String name = request.getParameter("desc");
+	%><%
+	String desc = request.getParameter("pname");
+	%><%
+	String price = request.getParameter("price");
+	%>
     <nav>
       <img src="./assets/Logo.svg" alt="Kratos.logo" class="logo" />
     </nav>
@@ -15,12 +26,12 @@
         <img src="./assets/kratos-big.svg" alt="" class="chip" />
         <img src="./assets/card-bg.svg" alt="" class="card-vec vec-left" />
         <img src="./assets/card-bg.svg" alt="" class="card-vec vec-right" />
-        <form action="#" class="card-info">
+        <div class="card-info">
           <div class="input-field" id="cnumber">
             <input
               type="text"
               name="cardno"
-              pattern="[A-Za-z@. \s]{2,25}"
+              pattern="[0-9 - \s]{2,25}"
               autocomplete="off"
               required
             />
@@ -30,17 +41,17 @@
             <input
               type="text"
               name="expiry"
-              pattern="[A-Za-z@. \s]{2,25}"
+              pattern="[0-9 \s]{4}"
               autocomplete="off"
               required
             />
-            <label for="expiry"><span>Expiry Date</span></label>
+            <label for="expiry"><span>Expiry</span></label>
           </div>
           <div class="input-field" id="cvv">
             <input
               type="text"
               name="cvv"
-              pattern="[A-Za-z@. \s]{2,25}"
+              pattern="[0-9 \s]{3}"
               autocomplete="off"
               required
             />
@@ -56,8 +67,16 @@
             />
             <label for="nameoncard"><span>Name on Card</span></label>
           </div>
-          <button class="cta form-btn">Proceed</button>
-        </form>
+          <a href="./paymentsuccess.html"><button class="cta form-btn">Proceed</button></a>
+        </div>
+      </div>
+      <div class="debit-card bill">
+        <img src="./assets/kratos-big.svg" alt="" class="chip" />
+        <img src="./assets/card-bg.svg" alt="" class="card-vec vec-left" />
+        <img src="./assets/card-bg.svg" alt="" class="card-vec vec-right" />
+        <span><%out.println(name);%></span>
+        <span><%out.println(desc); %></span>
+        <span><%out.println(price); %></span>
       </div>
     </section>
     <img src="./assets/card-background-vector.svg" alt="" class="bg" />
@@ -90,12 +109,12 @@
         )
         .from(".chip", { y: 100, opacity: 0, duration: 1 }, "-=1.3")
         .to(".chip", {
-          y: -80,
+          y: -10,
           yoyo: true,
           repeat: -1,
           ease: Power1.easeInOut,
           duration: 1.5,
         });
     </script>
-  </body>
+</body>
 </html>

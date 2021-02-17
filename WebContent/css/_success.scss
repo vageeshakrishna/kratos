@@ -1,0 +1,12 @@
+.success-brand {
+  @include flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 50vw;
+  margin-top: 20vh;
+}
+.success-btn {
+  position: absolute;
+  top: 20vh;
+  right: 30vh;
+}

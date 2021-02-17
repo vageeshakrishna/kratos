@@ -19,10 +19,11 @@ public class UserDao {
 		int status = 0;
 		try {
 			Connection con = getConnection();
-			PreparedStatement ps = con.prepareStatement("insert into users(name,email,password) values(?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into users(name,email,address,password) values(?,?,?,?)");
 			ps.setString(1, u.getName());
 			ps.setString(2, u.getEmail());
-			ps.setString(3, u.getPassword());
+			ps.setString(3, u.getAddress());
+			ps.setString(4,u.getPassword());
 			status = ps.executeUpdate();
 		} catch (Exception e) {
 			System.out.println(e);
@@ -38,7 +39,7 @@ public class UserDao {
 			ps.setString(1, u.getPname());
 			ps.setString(2, u.getDesc());
 			ps.setInt(3, u.getPrice());
-			ps.setString(3, u.getImg());
+			ps.setString(4, u.getImg());
 			status = ps.executeUpdate();
 		} catch (Exception e) {
 			System.out.println(e);
@@ -102,6 +103,18 @@ public class UserDao {
 		try {
 			Connection con = getConnection();
 			PreparedStatement ps = con.prepareStatement("delete from defectreport where prodname='"+pname+"'");
+			status = ps.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return status;
+	}
+	public static int addcontact(User u) {
+		int status = 0;
+		try {
+			Connection con = getConnection();
+			PreparedStatement ps = con.prepareStatement("insert into contact(email) values(?)");
+			ps.setString(1, u.getEmail());
 			status = ps.executeUpdate();
 		} catch (Exception e) {
 			System.out.println(e);
